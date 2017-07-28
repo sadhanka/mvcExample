@@ -20,3 +20,7 @@ function my_autoload_register( $className ) {
     }
 }
 require_once (ROOT . DS . 'config' . DS . 'config.php');
+
+function tr($str, $defaultStr = '') {
+    return Lang::get($str, $defaultStr);
+}

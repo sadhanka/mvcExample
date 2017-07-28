@@ -118,7 +118,7 @@ class Router
     private function getRealUri($strUri = '')
     {
         if ($strUri && Config::get('dir') !== '') {
-            $dirArray = explode('/', Config::get('dir'));
+            $dirArray = explode(DS, Config::get('dir'));
             $arrayUri = explode('/', $strUri);
             $isInArray = false;
             foreach ($dirArray as $key=>$dirPart) {
