@@ -1,5 +1,9 @@
 
-    This is index.html
-    <br/>
+<?php if ($data['pages']) {?>
 
-    <?=$data['test_content']?>
+<ul class="pagelist nav navbar-nav">
+    <?php foreach($data['pages'] as $pageValues) {?>
+    <li><a class="pagelist" href="page/view/<?=$pageValues['alias']?>"><?=$pageValues['title']?></a> </li>
+    <?php }?>
+</ul>
+<?php }?>

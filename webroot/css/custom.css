@@ -1,0 +1,7 @@
+ul.pagelist {
+    background-color: white;
+    color: white;
+}
+ul.pagelist li a.pagelist {
+    color: white;
+}
