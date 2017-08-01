@@ -19,4 +19,9 @@ class Page extends Controller
         $alias = $paramsArray[0];
         $this->data['pages'] = $this->model->getPage($alias);
     }
+
+    public function admin_index()
+    {
+        
+    }
 }

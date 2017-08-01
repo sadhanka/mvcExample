@@ -39,8 +39,7 @@ class App
             throw new Exception('Class "' . $controllerClass .'" wasnot found');
         }
 
-        $layout = Config::get('default_route');
-//        $layoutPath = ROOT . DS . Config::get('views_dir') . DS . self::$router->getController() . DS . $layout . '.html';
+        $layout = self::$router->getRoute();
         $layoutPath = ROOT . DS . Config::get('views_dir') . DS . $layout . '.html';
 
         $layoutObj = new Views(compact('content'), $layoutPath);
