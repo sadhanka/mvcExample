@@ -13,4 +13,3 @@ require_once(ROOT . DS . 'lib' . DS . 'init.php');
 
 $uri = $_SERVER['REQUEST_URI'];
 App::run($uri);
-
