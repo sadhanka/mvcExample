@@ -1,0 +1,13 @@
+<h3>Pages</h3>
+<table class="table">
+    <?php
+    foreach($data['pages'] as $pageValues) {?>
+    <tr>
+        <td><?=$pageValues['title']?></td>
+        <td><a href="admin/pages/edit/<?=$pageValues['id']?>">Edit</a></td>
+        <td><a href="admin/pages/delete/<?=$pageValues['id']?>" class="confirm" style="color: red">Delete</a></td>
+    </tr>
+    <?php } ?>
+</table>
+
+<div><a href="admin/pages/add/?>">Add page</a></div>

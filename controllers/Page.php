@@ -22,6 +22,6 @@ class Page extends Controller
 
     public function admin_index()
     {
-        
+        $this->data['pages'] = $this->model->pagesList();
     }
 }
