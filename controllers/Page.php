@@ -32,6 +32,7 @@ class Page extends Controller
         }
         else {
             Session::setUserMessage('Incorrect page ID');
+            Router::redirect('admin/page');
         }
     }
 }

@@ -134,4 +134,9 @@ class Router
         }
         return false;
     }
+
+    public static function redirect($location)
+    {
+        header('Location: /' . Config::get('dir') . $location);
+    }
 }
