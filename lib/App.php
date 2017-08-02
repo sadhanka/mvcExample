@@ -21,7 +21,7 @@ class App
         Lang::load(self::$router->getLanguage());
 
         $controllerClass = ucfirst(self::$router->getController());
-        $controllerMethod = self::$router->getAction();
+        $controllerMethod = self::$router->getMethodPrefix() . self::$router->getAction();
 
         if (class_exists($controllerClass)) {
             $controllerObj = new $controllerClass;
