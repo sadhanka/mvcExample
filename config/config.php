@@ -18,3 +18,6 @@ Config::set('db_host', 'localhost');
 Config::set('db_name', 'mvc');
 Config::set('db_user', 'root');
 Config::set('db_pass', '');
+
+Config::set('pass_salt', 'dg6hf6ejbskj8draols');
+Config::set('pass_pep', 'd5ohewedhskjfdja56s');
