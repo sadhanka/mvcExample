@@ -27,7 +27,6 @@ class App
             $controllerObj = new $controllerClass;
             if(method_exists($controllerObj, $controllerMethod)) {
                 $controllerObj->$controllerMethod();
-//                var_dump($controllerObj->getData());
                 $viewObj = new Views($controllerObj->getData());
                 $content = $viewObj->render();
             }

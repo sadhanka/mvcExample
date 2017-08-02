@@ -24,4 +24,14 @@ class Page extends Controller
     {
         $this->data['pages'] = $this->model->pagesList();
     }
+
+    public function edit()
+    {
+        if ( isset($this->params[0]) && is_numeric($this->params[0]) ) {
+            $this->data['pages'] = $this->model->getPagesById($this->params[0]);
+        }
+        else {
+            Session::setUserMessage('Incorrect page ID');
+        }
+    }
 }
