@@ -48,4 +48,15 @@ class PageModel extends Model
         }
         return false;
     }
+
+    public function delete($pageId)
+    {
+        if (!empty($pageId) && is_numeric($pageId)) {
+            $strQuery = "DELETE FROM pages WHERE id = ?";
+            $stmt = $this->db->prepare($strQuery);
+            $stmt->execute([$pageId]);
+            return $this->db->commit();
+        }
+        return false;
+    }
 }

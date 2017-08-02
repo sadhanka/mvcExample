@@ -37,7 +37,7 @@ class Page extends Controller
                 }
             }
             else {
-                Session::setUserMessage('Error - page id was missed');
+                Session::setUserMessage('Error: page ID was missed');
             }
             Router::redirect('admin/page');
         }
@@ -63,5 +63,21 @@ class Page extends Controller
             }
             Router::redirect('admin/page');
         }
+    }
+
+    public function delete()
+    {
+        if ( isset($this->params[0]) && is_numeric($this->params[0]) ) {
+            if ( $this->model->delete($this->params[0]) ) {
+                Session::setUserMessage('Page was deleted');
+            }
+            else {
+                Session::setUserMessage('Error while deleting page with ID "' . $this->params[0] . '"');
+            }
+        }
+        else {
+            Session::setUserMessage('Error: page ID "' . $this->params[0] . '" was missed');
+        }
+        Router::redirect('admin/page');
     }
 }
