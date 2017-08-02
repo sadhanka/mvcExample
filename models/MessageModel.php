@@ -16,7 +16,7 @@ class MessageModel extends Model
             }
             $stmt = $this->db->prepare($strQuery);
             $stmt->exec($dbValues);
-//            $this->db->commit();
+            $this->db->commit();
             $id = $this->db->lastInsertId();
 
             return $id;
