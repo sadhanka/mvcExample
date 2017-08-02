@@ -8,4 +8,9 @@ class Users extends Controller
         parent::__construct($data);
         $this->model = new UsersModel();
     }
+
+    public function admin_login()
+    {
+        
+    }
 }
