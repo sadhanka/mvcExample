@@ -26,4 +26,26 @@ class Session
         echo self::$userMessage;
         self::$userMessage = null;
     }
+
+    public static function setValue($key, $val)
+    {
+        $_SESSION[$key] = $val;
+    }
+
+    public static function getValue($key)
+    {
+        return (isset($_SESSION[$key]) ? $_SESSION[$key] : false);
+    }
+
+    public static function delValue($key)
+    {
+        if (isset($_SESSION[$key])) {
+            unset($_SESSION[$key]);
+        }
+    }
+
+    public function destroy()
+    {
+        session_destroy();
+    }
 }

@@ -10,6 +10,6 @@ define('ROOT', dirname(__DIR__));
 define('DIR', dirname(__DIR__));
 
 require_once(ROOT . DS . 'lib' . DS . 'init.php');
-
+session_start();
 $uri = $_SERVER['REQUEST_URI'];
 App::run($uri);
