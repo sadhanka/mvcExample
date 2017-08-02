@@ -2,7 +2,7 @@
 <form action="" method="post">
     <input type="text" class="form-control" name="title" placeholder="Title" value="<?=$data['pages']['title']?>"/><br/>
     <input type="text" class="form-control" name="alias" placeholder="Alias" value="<?=$data['pages']['alias']?>"/><br/>
-    <textarea name="message" class="form-control" placeholder="Content"><?=$data['pages']['content']?></textarea><br/>
+    <textarea name="content" class="form-control" placeholder="Content"><?=$data['pages']['content']?></textarea><br/>
     <input type="checkbox" name="published"<?=($data['pages']['content'] ? ' checked' : '')?>/> Published<br/>
     <input type="hidden" name="id" value="<?=$data['pages']['id']?>">
     <button class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
