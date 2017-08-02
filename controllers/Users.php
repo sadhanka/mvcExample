@@ -21,4 +21,10 @@ class Users extends Controller
             Router::redirect('admin');
         }
     }
+
+    public function admin_logout()
+    {
+        Session::destroy();
+        Router::redirect('admin');
+    }
 }

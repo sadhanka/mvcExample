@@ -44,7 +44,7 @@ class Session
         }
     }
 
-    public function destroy()
+    public static function destroy()
     {
         session_destroy();
     }
