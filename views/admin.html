@@ -34,6 +34,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <?php if ( Session::getValue('user') == 'admin' ) {?>
             <ul class="nav navbar-nav">
                 <li>
                     <a class="page-scroll" href="/<?=Config::get('dir')?>admin/page">Pages</a>
@@ -41,7 +42,11 @@
                 <li>
                     <a class="page-scroll" href="/<?=Config::get('dir')?>admin/contact">Contact us</a>
                 </li>
+                <li>
+                    <a class="page-scroll" href="/<?=Config::get('dir')?>admin/users/logout">Log out</a>
+                </li>
             </ul>
+            <?php } ?>
         </div>
         <!-- /.navbar-collapse -->
     </div>
