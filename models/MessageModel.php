@@ -23,4 +23,12 @@ class MessageModel extends Model
         }
         return false;
     }
+
+    public function messagesList()
+    {
+        $strQuery = "SELECT * FROM messages WHERE 1 ";
+        $stmt = $this->db->prepare($strQuery);
+        $stmt->execute([]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

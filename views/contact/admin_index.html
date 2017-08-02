@@ -1,0 +1,13 @@
+<h3>Messages</h3>
+<table class="table">
+    <?php
+    foreach($data['messages'] as $pageValues) {?>
+    <tr>
+        <td><?=$pageValues['name']?></td>
+        <td><?=$pageValues['email']?></td>
+        <td><?=$pageValues['message']?></td>
+        <td><a href="#<?=$pageValues['id']?>">Edit</a></td>
+        <td><a href="#<?=$pageValues['id']?>" class="confirm" style="color: red">Delete</a></td>
+    </tr>
+    <?php } ?>
+</table>
