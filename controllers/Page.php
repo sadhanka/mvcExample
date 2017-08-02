@@ -25,7 +25,7 @@ class Page extends Controller
         $this->data['pages'] = $this->model->pagesList();
     }
 
-    public function edit()
+    public function admin_edit()
     {
         if ( $_POST ) {
             if ( !empty( $_POST['id']) && is_numeric( $_POST['id'])) {
@@ -51,7 +51,7 @@ class Page extends Controller
         }
     }
 
-    public function add()
+    public function admin_add()
     {
         if ( $_POST ) {
             $saved = $this->model->save($_POST);
